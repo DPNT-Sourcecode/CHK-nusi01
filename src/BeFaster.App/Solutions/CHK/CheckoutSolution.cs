@@ -126,13 +126,9 @@ namespace BeFaster.App.Solutions.CHK
                         count += countT * 20;
 
                         int wholeU = countU / 3;
-                        if (countU >= wholeU && wholeU > 1)
+                        if (wholeU > 1)
                         {
                             countU -= wholeU;
-                        }
-                        else
-                        {
-                            countU = 0;
                         }
                         count += countU * 40;
 
@@ -162,4 +158,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
