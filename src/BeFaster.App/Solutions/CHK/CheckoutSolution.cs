@@ -72,7 +72,10 @@ namespace BeFaster.App.Solutions.CHK
 
                         count += countI * 35;
                         count += countJ * 60;
-
+                       
+                        int wholeK = countK / 2;
+                        int decimalK = countK % 2;
+    
                         count += countL * 90;
                         count += countM * 15;
 
@@ -116,4 +119,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
