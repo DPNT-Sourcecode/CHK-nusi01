@@ -119,7 +119,7 @@ namespace BeFaster.App.Solutions.CHK
                         }
                         int wholeQ = countQ / 3;
                         int decimalQ = countQ % 3;
-                        count += ((wholeQ * 80) + (decimalQ * 50));
+                        count += ((wholeQ * 80) + (decimalQ * 30));
 
                         count += countR * 50;
                         count += countS * 30;
@@ -162,5 +162,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
