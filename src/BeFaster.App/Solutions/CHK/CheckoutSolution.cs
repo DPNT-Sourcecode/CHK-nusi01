@@ -9,6 +9,10 @@ namespace BeFaster.App.Solutions.CHK
             if (skus != null && skus.Length > 0)
             {
                 char[] charArray = new char[skus.Length];
+                int countA = skus.Count(x => x == 'A');
+                int countB = skus.Count(x => x == 'A');
+                int countC = skus.Count(x => x == 'A');
+                int countD = skus.Count(x => x == 'A');
 
             }
             else
@@ -20,5 +24,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
