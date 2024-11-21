@@ -9,7 +9,7 @@ namespace BeFaster.App.Solutions.CHK
             int count = 0;
             if (skus != null && skus.Length > 0)
             {
-                if (skus.Any(x => x != 'A' || x != 'B' || x != 'C' || x != 'D'))
+                if (skus.Any(x => x != 'A' && x != 'B' && x != 'C' && x != 'D'))
                 {
                     return -1;
                 }
@@ -43,6 +43,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
