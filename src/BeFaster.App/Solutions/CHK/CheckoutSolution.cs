@@ -12,7 +12,7 @@ namespace BeFaster.App.Solutions.CHK
                 if (skus.Length > 0)
                 {
 
-                    if (skus.Any(x => x != 'A' && x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F'))
+                    if (skus.Any(x => (byte)x > 73 && x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F'))
                     {
                         return -1;
                     }
@@ -71,5 +71,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
