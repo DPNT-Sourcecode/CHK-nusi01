@@ -133,6 +133,13 @@ namespace BeFaster.App.Solutions.CHK
                         {
                             countU = 0;
                         }
+                        count += countU * 40;
+
+                        int wholeV3 = countV / 3;
+                        int decimalV3=countV % 3;
+                        int wholeV2 = decimalV3 / 2;
+                        int decimalV2 = decimalV3 % 2;
+                        count += ((wholeV3 * 130) + (wholeV2 * 90) + (decimalV2 * 50));
 
                         count += countW * 20;
                         count += countX * 90;
@@ -154,6 +161,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
