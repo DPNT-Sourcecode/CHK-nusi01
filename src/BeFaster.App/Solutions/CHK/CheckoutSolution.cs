@@ -24,7 +24,7 @@ namespace BeFaster.App.Solutions.CHK
                     int wholeA = countA / 3;
                     int decimalA = countA % 3;
                     int wholeB = countB / 2;
-                    int decimalB = countB / 2;
+                    int decimalB = countB % 2;
                     count += wholeA * 130;
                     count += decimalA * 50;
                     count += wholeB * 45;
@@ -43,3 +43,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
