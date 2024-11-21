@@ -35,7 +35,6 @@ namespace BeFaster.App.Solutions.CHK
                         int wholeA3 = decimalA5 / 3;
                         int decimalA3 = decimalA5 % 3;
 
-
                         int wholeB = countB / 2;
                         int decimalB = countB % 2;
                         count += wholeA5 * 200;
@@ -59,5 +58,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
