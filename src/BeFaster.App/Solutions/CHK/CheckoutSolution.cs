@@ -22,14 +22,20 @@ namespace BeFaster.App.Solutions.CHK
                         int countB = skus.Count(x => x == 'B');
                         int countC = skus.Count(x => x == 'C');
                         int countD = skus.Count(x => x == 'D');
+                        int countE = skus.Count(x => x == 'E');
                         count += countC * 20;
                         count += countD * 15;
-                        int wholeA = countA / 3;
-                        int decimalA = countA % 3;
+                        int wholeE = countE / 2;
+                        int wholeA5 = countA / 5;
+                        int decimalA5 = countA % 5;
+
+                        int wholeA3 = decimalA5 / 3;
+                        int decimalA3 = decimalA5 % 3;
                         int wholeB = countB / 2;
                         int decimalB = countB % 2;
-                        count += wholeA * 130;
-                        count += decimalA * 50;
+                        count += wholeA5 * 200;
+                        count += wholeA3 * 130;
+                        count += decimalA3 * 50;
                         count += wholeB * 45;
                         count += decimalB * 30;
                         return count;
@@ -48,3 +54,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
