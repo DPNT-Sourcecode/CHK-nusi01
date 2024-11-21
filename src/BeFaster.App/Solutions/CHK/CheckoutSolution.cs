@@ -6,8 +6,9 @@ namespace BeFaster.App.Solutions.CHK
     {
         public static int ComputePrice(string? skus)
         {
-            if (skus != null && skus.Length>0)
+            if (skus != null && skus.Length > 0)
             {
+                char[] charArray = new char[skus.Length];
 
             }
             else
@@ -19,4 +20,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
