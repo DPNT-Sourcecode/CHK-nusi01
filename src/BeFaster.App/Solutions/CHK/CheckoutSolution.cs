@@ -53,8 +53,19 @@ namespace BeFaster.App.Solutions.CHK
                         count += wholeA3 * 130;
                         count += decimalA3 * 50;
 
+                        int wholeE = countE / 2;
+                        if (countB >= wholeE)
+                        {
+                            countB -= wholeE;
+                        }
+                        else
+                        {
+                            countB = 0;
+                        }
                         int wholeB = countB / 2;
                         int decimalB = countB % 2;
+                        count += wholeB * 45;
+                        count += decimalB * 30;
 
                         count += countC * 20;
                         count += countD * 15;
@@ -78,10 +89,19 @@ namespace BeFaster.App.Solutions.CHK
                         count += ((wholeK * 150) + (decimalK * 80));
     
                         count += countL * 90;
+
+                        int wholeN = countN / 3;
+                        if (countM >= wholeN)
+                        {
+                            countM -= wholeN;
+                        }
+                        else
+                        {
+                            countM = 0;
+                        }
                         count += countM * 15;
-
-                        int wholeN = countN / 3; 
-
+                        count += countN * 40;
+                        count += countN * 40;
                         count += countO * 10;
 
                         count += countS * 30;
@@ -91,21 +111,6 @@ namespace BeFaster.App.Solutions.CHK
                         count += countX * 90;
                         count += countY * 10;
                         count += countZ * 50;
-                        int wholeE = countE / 2;
-                        if (countB >= wholeE)
-                        {
-                            countB -= wholeE;
-                        }
-                        else
-                        {
-                            countB = 0;
-                        }
-
-
-
-
-                        count += wholeB * 45;
-                        count += decimalB * 30;
                         return count;
 
                     }
@@ -122,3 +127,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
