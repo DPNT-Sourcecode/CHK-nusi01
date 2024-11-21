@@ -12,7 +12,7 @@ namespace BeFaster.App.Solutions.CHK
                 if (skus.Length > 0)
                 {
 
-                    if (skus.Any(x => x != 'A' && x != 'B' && x != 'C' && x != 'D' && x != 'E' && x!= 'F'))
+                    if (skus.Any(x => x != 'A' && x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F'))
                     {
                         return -1;
                     }
@@ -37,6 +37,10 @@ namespace BeFaster.App.Solutions.CHK
                         {
                             countB = 0;
                         }
+
+                        int wholeF = countF / 3;
+
+                        count += (countF - wholeF) * 10;
 
                         int wholeA5 = countA / 5;
                         int decimalA5 = countA % 5;
@@ -67,4 +71,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
