@@ -123,8 +123,58 @@ namespace BeFaster.App.Solutions.CHK
 
                         count += countR * 50;
 
-                        List<int> group = new List<int>();                       
+                        List<int> group = new List<int>();
+                        if (countS > 0)
+                        {
+                            group.Add(countS);
+                        }
+                        if (countT > 0)
+                        {
+                            group.Add(countT);
+                        }
+                        if (countX > 0)
+                        {
+                            group.Add(countX);
+                        }
+                        if (countY > 0)
+                        {
+                            group.Add(countY);
+                        }
+                        if (countZ > 0)
+                        {
+                            group.Add(countZ);
+                        }
+                        int minNum = 0;
+                        if (group.Count > 2)
+                        {
+                            minNum = group.Min();
+                            if (countS > 0)
+                            {
+                                countS -= minNum;
+                            }
+                            if (countT > 0)
+                            {
+                                countT -= minNum;
+                            }
+                            if (countX > 0)
+                            {
+                                countX -= minNum;
+                            }
+                            if (countY > 0)
+                            {
+                                countY -= minNum;
+                            }
+                            if (countZ > 0)
+                            {
+                                countZ -= minNum;
+                            }
+                        }
+                        countT -= minNum;
+                        countX -= minNum;
+                        countY -= minNum;
+                        countZ -= minNum;
 
+                        count += minNum * 45;
 
 
                         count += countS * 20;
@@ -166,4 +216,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
