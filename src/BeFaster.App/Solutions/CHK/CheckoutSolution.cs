@@ -123,7 +123,12 @@ namespace BeFaster.App.Solutions.CHK
 
                         count += countR * 50;
 
-
+                        List<int> group = new List<int>();
+                        group.Add(countS);
+                        group.Add(countT);
+                        group.Add(countX);
+                        group.Add(countY); 
+                        group.Add(countZ);
 
                         count += countS * 30;
                         count += countT * 20;
@@ -164,6 +169,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
