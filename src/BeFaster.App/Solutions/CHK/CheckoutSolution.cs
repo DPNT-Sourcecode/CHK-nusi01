@@ -145,7 +145,7 @@ namespace BeFaster.App.Solutions.CHK
                             group.Add(countZ);
                         }
                         int minNum = 0;
-                        if (group.Count > 2)
+                        if (group.Count > 0)
                         {
                             minNum = group.Min();
                             if (countS > 0)
@@ -212,3 +212,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
