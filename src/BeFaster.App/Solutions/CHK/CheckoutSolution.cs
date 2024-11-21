@@ -24,10 +24,67 @@ namespace BeFaster.App.Solutions.CHK
                         int countD = skus.Count(x => x == 'D');
                         int countE = skus.Count(x => x == 'E');
                         int countF = skus.Count(x => x == 'F');
+                        int countG = skus.Count(x => x == 'G');
+                        int countH = skus.Count(x => x == 'H');
+                        int countI = skus.Count(x => x == 'I');
+                        int countJ = skus.Count(x => x == 'J');
+                        int countK = skus.Count(x => x == 'K');
+                        int countL = skus.Count(x => x == 'L');
+                        int countM = skus.Count(x => x == 'M');
+                        int countN = skus.Count(x => x == 'N');
+                        int countO = skus.Count(x => x == 'O');
+                        int countP = skus.Count(x => x == 'P');
+                        int countQ = skus.Count(x => x == 'Q');
+                        int countR = skus.Count(x => x == 'R');
+                        int countS = skus.Count(x => x == 'S');
+                        int countT = skus.Count(x => x == 'T');
+                        int countU = skus.Count(x => x == 'U');
+                        int countV = skus.Count(x => x == 'V');
+                        int countW = skus.Count(x => x == 'W');
+                        int countX = skus.Count(x => x == 'X');
+                        int countY = skus.Count(x => x == 'Y');
+                        int countZ = skus.Count(x => x == 'Z');
+
+                        int wholeA5 = countA / 5;
+                        int decimalA5 = countA % 5;
+                        int wholeA3 = decimalA5 / 3;
+                        int decimalA3 = decimalA5 % 3;
+                        count += wholeA5 * 200;
+                        count += wholeA3 * 130;
+                        count += decimalA3 * 50;
+
+                        int wholeB = countB / 2;
+                        int decimalB = countB % 2;
 
                         count += countC * 20;
                         count += countD * 15;
                         count += countE * 40;
+
+                        int wholeF = countF / 3;
+                        count += (countF - wholeF) * 10;
+
+                        count += countG * 20;
+
+                        int wholeH10 = countH / 10;
+                        int wholeH5 = wholeH10 / 5;
+                        int decimalH5 = wholeH5 % 5;
+                        count += ((wholeH10 * 80) + (wholeH5 * 45) + (decimalH5 * 10));
+
+                        count += countI * 35;
+                        count += countJ * 60;
+
+                        count += countL * 90;
+                        count += countM * 15;
+
+                        count += countO * 10;
+
+                        count += countS * 30;
+                        count += countT * 20;
+
+                        count += countW * 20;
+                        count += countX * 90;
+                        count += countY * 10;
+                        count += countZ * 50;
                         int wholeE = countE / 2;
                         if (countB >= wholeE)
                         {
@@ -38,21 +95,9 @@ namespace BeFaster.App.Solutions.CHK
                             countB = 0;
                         }
 
-                        int wholeF = countF / 3;
 
-                        count += (countF - wholeF) * 10;
 
-                        int wholeA5 = countA / 5;
-                        int decimalA5 = countA % 5;
 
-                        int wholeA3 = decimalA5 / 3;
-                        int decimalA3 = decimalA5 % 3;
-
-                        int wholeB = countB / 2;
-                        int decimalB = countB % 2;
-                        count += wholeA5 * 200;
-                        count += wholeA3 * 130;
-                        count += decimalA3 * 50;
                         count += wholeB * 45;
                         count += decimalB * 30;
                         return count;
@@ -71,3 +116,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
