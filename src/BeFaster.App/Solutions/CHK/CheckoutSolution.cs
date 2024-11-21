@@ -27,7 +27,14 @@ namespace BeFaster.App.Solutions.CHK
                         count += countD * 15;
                         count += countE * 40;
                         int wholeE = countE / 2;
-                        countB -= wholeE;
+                        if (countB >= wholeE)
+                        {
+                            countB -= wholeE;
+                        }
+                        else
+                        {
+                            countB = 0;
+                        }
 
                         int wholeA5 = countA / 5;
                         int decimalA5 = countA % 5;
@@ -58,6 +65,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
