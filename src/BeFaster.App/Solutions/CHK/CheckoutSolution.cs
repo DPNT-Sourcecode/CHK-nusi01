@@ -12,7 +12,7 @@ namespace BeFaster.App.Solutions.CHK
                 if (skus.Length > 0)
                 {
                     // Converted to byte
-                    if (skus.Any(x => x != 'A' &&  x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F' && x != 'G' && x != 'H' && x != 'I' && x != 'J' && x != 'K' && x != 'L' && x != 'M' && x != 'N' && x != 'O' && x != 'P' && x != 'Q' && x != 'R' && x != 'S' && x != 'T' && x != 'U' && x != 'V' && x != 'W' && x != 'X' && x != 'Y' && x != 'Z'))
+                    if (skus.Any(x => x != 'A' && x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F' && x != 'G' && x != 'H' && x != 'I' && x != 'J' && x != 'K' && x != 'L' && x != 'M' && x != 'N' && x != 'O' && x != 'P' && x != 'Q' && x != 'R' && x != 'S' && x != 'T' && x != 'U' && x != 'V' && x != 'W' && x != 'X' && x != 'Y' && x != 'Z'))
                     {
                         return -1;
                     }
@@ -126,7 +126,7 @@ namespace BeFaster.App.Solutions.CHK
                         count += countT * 20;
 
                         int wholeU = countU / 3;
-                        if (countU >= wholeU)
+                        if (countU >= wholeU && wholeU > 1)
                         {
                             countU -= wholeU;
                         }
@@ -137,7 +137,7 @@ namespace BeFaster.App.Solutions.CHK
                         count += countU * 40;
 
                         int wholeV3 = countV / 3;
-                        int decimalV3=countV % 3;
+                        int decimalV3 = countV % 3;
                         int wholeV2 = decimalV3 / 2;
                         int decimalV2 = decimalV3 % 2;
                         count += ((wholeV3 * 130) + (wholeV2 * 90) + (decimalV2 * 50));
@@ -162,3 +162,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
