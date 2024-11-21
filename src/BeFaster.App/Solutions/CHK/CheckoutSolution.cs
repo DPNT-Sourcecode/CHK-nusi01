@@ -75,9 +75,12 @@ namespace BeFaster.App.Solutions.CHK
                        
                         int wholeK = countK / 2;
                         int decimalK = countK % 2;
+                        count += ((wholeK * 150) + (decimalK * 80));
     
                         count += countL * 90;
                         count += countM * 15;
+
+                        int wholeN = countN / 3; 
 
                         count += countO * 10;
 
@@ -119,5 +122,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
