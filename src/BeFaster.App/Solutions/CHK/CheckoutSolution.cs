@@ -122,6 +122,9 @@ namespace BeFaster.App.Solutions.CHK
                         count += ((wholeQ * 80) + (decimalQ * 30));
 
                         count += countR * 50;
+
+
+
                         count += countS * 30;
                         count += countT * 20;
 
@@ -161,6 +164,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
