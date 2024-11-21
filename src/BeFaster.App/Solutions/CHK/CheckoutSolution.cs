@@ -12,7 +12,7 @@ namespace BeFaster.App.Solutions.CHK
                 if (skus.Length > 0)
                 {
                     // Converted to byte
-                    if (skus.Any(x => (byte)x > 64 && (byte)x < 90))
+                    if (skus.Any(x => x != 'A' &&  x != 'B' && x != 'C' && x != 'D' && x != 'E' && x != 'F' && x != 'G' && x != 'H' && x != 'I' && x != 'J' && x != 'K' && x != 'L' && x != 'M' && x != 'N' && x != 'O' && x != 'P' && x != 'Q' && x != 'R' && x != 'S' && x != 'T' && x != 'U' && x != 'V' && x != 'W' && x != 'X' && x != 'Y' && x != 'Z'))
                     {
                         return -1;
                     }
@@ -161,3 +161,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
