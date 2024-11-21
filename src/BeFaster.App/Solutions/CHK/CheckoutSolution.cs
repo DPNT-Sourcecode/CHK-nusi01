@@ -15,7 +15,6 @@ namespace BeFaster.App.Solutions.CHK
                 }
                 else
                 {
-                    char[] charArray = new char[skus.Length];
                     int countA = skus.Count(x => x == 'A');
                     int countB = skus.Count(x => x == 'B');
                     int countC = skus.Count(x => x == 'C');
@@ -25,8 +24,12 @@ namespace BeFaster.App.Solutions.CHK
                     int wholeA = countA / 3;
                     int decimalA = countA % 3;
                     int wholeB = countB / 2;
-                    int decimalB = countB/2;
-
+                    int decimalB = countB / 2;
+                    count += wholeA * 130;
+                    count += decimalA * 50;
+                    count += wholeB * 45;
+                    count += decimalB * 30;
+                    return count;
 
                 }
 
@@ -40,6 +43,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
