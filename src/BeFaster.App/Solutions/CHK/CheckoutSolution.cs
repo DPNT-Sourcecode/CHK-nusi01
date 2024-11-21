@@ -130,6 +130,8 @@ namespace BeFaster.App.Solutions.CHK
                         group.Add(countY); 
                         group.Add(countZ);
 
+                        group.IndexOf(group.Min());
+
                         count += countS * 30;
                         count += countT * 20;
 
@@ -169,8 +171,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
-
-
-
-
