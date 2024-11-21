@@ -77,8 +77,9 @@ namespace BeFaster.App.Solutions.CHK
                         count += countG * 20;
 
                         int wholeH10 = countH / 10;
-                        int wholeH5 = wholeH10 / 5;
-                        int decimalH5 = wholeH5 % 5;
+                        int decimalH10 = countH % 10;
+                        int wholeH5 = decimalH10 / 5;
+                        int decimalH5 = decimalH10 % 5;
                         count += ((wholeH10 * 80) + (wholeH5 * 45) + (decimalH5 * 10));
 
                         count += countI * 35;
@@ -161,4 +162,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
