@@ -124,61 +124,37 @@ namespace BeFaster.App.Solutions.CHK
                         count += countR * 50;
 
                         List<int> group = new List<int>();
-                        if (countS > 0)
-                        {
-                            group.Add(countS);
-                        }
-                        if (countT > 0)
-                        {
-                            group.Add(countT);
-                        }
-                        if (countX > 0)
-                        {
-                            group.Add(countX);
-                        }
-                        if (countY > 0)
-                        {
-                            group.Add(countY);
-                        }
-                        if (countZ > 0)
-                        {
-                            group.Add(countZ);
-                        }
-                        int minNum = 0;
-                        if (group.Count > 2)
-                        {
-                            minNum = group.Min();
-                            if (countS > 0)
-                            {
-                                countS -= minNum;
-                            }
-                            if (countT > 0)
-                            {
-                                countT -= minNum;
-                            }
-                            if (countX > 0)
-                            {
-                                countX -= minNum;
-                            }
-                            if (countY > 0)
-                            {
-                                countY -= minNum;
-                            }
-                            if (countZ > 0)
-                            {
-                                countZ -= minNum;
-                            }
-                        }
-                        countT -= minNum;
-                        countX -= minNum;
-                        countY -= minNum;
-                        countZ -= minNum;
 
-                        count += minNum * 45;
+                        group.Add(countZ);
+                        group.Add(countS);
+                        group.Add(countT);
+                        group.Add(countY);
+                        group.Add(countX);
 
+                        int remainder = 0;
+                        int wholeDivision = 0;
+                        int lenght = group.Count;
+                        for (int i = 0; i < lenght; i++)
+                        {
+                            remainder += group[i];
+                            if (remainder > 2)
+                            {
+                                wholeDivision += remainder / 3;
+                                remainder %= 3;
+                                group[i] = remainder;
+                                for (int j=0; j < i; j++)
+                                {
+                                    group[j] = 0;
+                                }
+                            }
+                        }
 
-                        count += countS * 20;
-                        count += countT * 20;
+                        count += (wholeDivision * 45);
+                        count += group[0] * 21;
+                        count += group[1] * 20;
+                        count += group[2] * 20;
+                        count += group[3] * 20;
+                        count += group[4] * 17;
 
                         int wholeU = countU / 3;
                         if (countU == 3)
@@ -197,9 +173,6 @@ namespace BeFaster.App.Solutions.CHK
                         count += ((wholeV3 * 130) + (wholeV2 * 90) + (decimalV2 * 50));
 
                         count += countW * 20;
-                        count += countX * 17;
-                        count += countY * 20;
-                        count += countZ * 21;
                         return count;
 
                     }
@@ -216,3 +189,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
